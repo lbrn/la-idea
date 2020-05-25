@@ -7,6 +7,11 @@ const theme = createMuiTheme({
 		main: "#AF170B"
 	}
   },
+  typography: {
+	h3:{
+		
+	}
+  }
 });
 
 export default theme;
