@@ -34,6 +34,7 @@ const MainMenu = () => {
 				color="default"
 				aria-label="menu"
 				onClick={() => setIsOpen(!isOpen)}
+				aria-expanded={isOpen}
 			>
 				{isOpen ? (
 					<MenuOpenRounded className={classes.icon} />
