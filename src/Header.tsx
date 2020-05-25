@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { AppBar, Toolbar, makeStyles } from '@material-ui/core';
 import MainMenu from './MainMenu';
 import theme from './theme/theme';

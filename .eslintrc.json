@@ -1,0 +1,16 @@
+{
+	"extends": ["eslint:recommended", "plugin:react/recommended"],
+	"plugins": ["react"],
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"rules": {
+		"react/jsx-uses-react": "error",
+		"react/jsx-uses-vars": "error",
+		"react/no-unused-state": "error",
+		"react/no-danger": "error",
+		"react/no-typos": "error"
+	}
+}
