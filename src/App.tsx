@@ -1,7 +1,7 @@
 import React from 'react';
-import './index.css';
 
 import { makeStyles, ThemeProvider } from '@material-ui/styles';
+import { CssBaseline } from '@material-ui/core';
 import Header from './Header';
 import HomePage from './HomePage';
 import theme from './theme/theme';
@@ -17,6 +17,7 @@ function App() {
 	const classes = useStyles();
 	return (
 		<ThemeProvider theme={theme}>
+			<CssBaseline />
 			<div className={classes.app}>
 				<Header />
 				<HomePage />

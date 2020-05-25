@@ -7,7 +7,16 @@ const theme = createMuiTheme({
 		},
 	},
 	typography: {
-		h3: {},
+		fontFamily: 'Montserrat, Helvetica, sans',
+		body1: {
+			fontFamily: 'Montserrat, Helvetica, sans',
+		},
+		h5: {
+			fontFamily: 'Proza Libre, Helvetica, sans',
+		},
+		h6: {
+			fontFamily: 'Montserrat, Helvetica, sans',
+		},
 	},
 });
 
