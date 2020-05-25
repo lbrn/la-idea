@@ -1,16 +1,17 @@
 import React, { Fragment } from 'react';
 import { Grid, Typography, Container } from '@material-ui/core';
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles, useTheme } from '@material-ui/styles';
 import homePageImg from './assets/HomePage.jpg';
-import homePageFilter from './assets/homePageFilter.svg';
+import ImageFilter from 'react-image-filter';
+import theme from './theme/theme';
 
 const useStyles = makeStyles({
 	homeImage: {
 		width: '100%',
 		height: '30vh',
 		// height: '50vh',
-		objectFit: 'cover',
-		filter: `url(${homePageFilter})`
+		// objectFit: 'cover',
+		// filter: `url(${homePageFilter})`
 	},
 });
 
@@ -18,11 +19,11 @@ const HomePage = () => {
 	const classes = useStyles();
 	return (
 		<Fragment>
-			<img
-				className={classes.homeImage}
-				alt="scientists"
-				// src="https://i.picsum.photos/id/1023/200/300.jpg"
-				src={homePageImg}
+			<ImageFilter
+				image={homePageImg}
+				filter={'duotone'}
+				colorOne={[40, 250, 250]}
+				colorTwo={theme.palette.primary.main}
 			/>
 			<Container>
 				<Grid container spacing={3}>
