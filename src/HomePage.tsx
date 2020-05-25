@@ -8,10 +8,7 @@ import theme from './theme/theme';
 const useStyles = makeStyles({
 	homeImage: {
 		width: '100%',
-		height: '30vh',
-		// height: '50vh',
-		// objectFit: 'cover',
-		// filter: `url(${homePageFilter})`
+		height: '40vh',
 	},
 });
 
@@ -20,10 +17,12 @@ const HomePage = () => {
 	return (
 		<Fragment>
 			<ImageFilter
+				preserveAspectRatio="cover"
+				className={classes.homeImage}
 				image={homePageImg}
 				filter={'duotone'}
-				colorOne={[40, 250, 250]}
-				colorTwo={theme.palette.primary.main}
+				colorOne={[0, 0, 0]}
+				colorTwo={[175, 23, 11]}
 			/>
 			<Container>
 				<Grid container spacing={3}>
