@@ -7,8 +7,11 @@ import {
 	IconButton,
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
-import theme from './theme/theme';
 import { MenuRounded, MenuOpenRounded } from '@material-ui/icons';
+
+import { Link } from 'react-router-dom';
+
+import theme from './theme/theme';
 
 const useStyles = makeStyles({
 	list: {
@@ -17,6 +20,10 @@ const useStyles = makeStyles({
 	icon: {
 		color: theme.palette.primary.main,
 		margin: theme.spacing(1),
+	},
+	link: {
+		textDecoration: 'none',
+		color: theme.palette.common.black,
 	},
 });
 interface MainMenuProps {
@@ -44,21 +51,27 @@ const MainMenu = () => {
 			</IconButton>
 			<Drawer open={isOpen} onClose={() => setIsOpen(false)}>
 				<List className={classes.list}>
-					<ListItem button>
-						<ListItemText>About</ListItemText>
-					</ListItem>
-					<ListItem button>
-						<ListItemText>Cores</ListItemText>
-					</ListItem>
-					<ListItem button>
-						<ListItemText>Cobre</ListItemText>
-					</ListItem>
-					<ListItem button>
-						<ListItemText>Inbre</ListItemText>
-					</ListItem>
-					<ListItem button>
-						<ListItemText>Nih Research</ListItemText>
-					</ListItem>
+					<Link to="/about" className={classes.link}>
+						<ListItem button>
+							<ListItemText>About</ListItemText>
+						</ListItem>
+					</Link>
+
+					<Link to="/cores" className={classes.link}>
+						<ListItem button>
+							<ListItemText>Cores</ListItemText>
+						</ListItem>
+					</Link>
+					<Link to="/inbre" className={classes.link}>
+						<ListItem button>
+							<ListItemText>Inbre</ListItemText>
+						</ListItem>
+					</Link>
+					<Link to="nih" className={classes.link}>
+						<ListItem button>
+							<ListItemText>Nih Research</ListItemText>
+						</ListItem>
+					</Link>
 				</List>
 			</Drawer>
 		</Fragment>

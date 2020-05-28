@@ -1,7 +1,9 @@
 import React from 'react';
+import { BrowserRouter as ReactRouter } from 'react-router-dom';
 
 import { makeStyles, ThemeProvider } from '@material-ui/styles';
 import { CssBaseline } from '@material-ui/core';
+import Router from './Router';
 import Header from './Header';
 import HomePage from './HomePage';
 import theme from './theme/theme';
@@ -18,11 +20,12 @@ function App() {
 	return (
 		<ThemeProvider theme={theme}>
 			<CssBaseline />
-			<div className={classes.app}>
-				<Header />
-				<HomePage />
-			</div>
-			/
+			<ReactRouter>
+				<div className={classes.app}>
+					<Header />
+					<Router />
+				</div>
+			</ReactRouter>
 		</ThemeProvider>
 	);
 }
