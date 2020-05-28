@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState, KeyboardEvent } from 'react';
 import {
 	Drawer,
 	List,
@@ -26,12 +26,16 @@ const useStyles = makeStyles({
 		color: theme.palette.common.black,
 	},
 });
-interface MainMenuProps {
-	isOpen: boolean;
-	closeMenu: any;
-}
+
 const MainMenu = () => {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
+
+	const handleKeyPress = (e: KeyboardEvent) => {
+		if (e.type === 'keydown' && (e.key === 'Tab' || e.key === 'Shift' || e.key === 'Enter')) {
+			return;
+		}
+		setIsOpen(false);
+	};
 
 	const classes = useStyles();
 	return (
@@ -49,29 +53,25 @@ const MainMenu = () => {
 					<MenuRounded className={classes.icon} />
 				)}
 			</IconButton>
-			<Drawer open={isOpen} onClose={() => setIsOpen(false)}>
+			<Drawer
+				open={isOpen}
+				onClose={() => setIsOpen(false)}
+				onClick={() => setIsOpen(!isOpen)}
+				onKeyDown={(e) => handleKeyPress(e)}
+			>
 				<List className={classes.list}>
-					<Link to="/about" className={classes.link}>
-						<ListItem button>
-							<ListItemText>About</ListItemText>
-						</ListItem>
-					</Link>
-
-					<Link to="/cores" className={classes.link}>
-						<ListItem button>
-							<ListItemText>Cores</ListItemText>
-						</ListItem>
-					</Link>
-					<Link to="/inbre" className={classes.link}>
-						<ListItem button>
-							<ListItemText>Inbre</ListItemText>
-						</ListItem>
-					</Link>
-					<Link to="nih" className={classes.link}>
-						<ListItem button>
-							<ListItemText>Nih Research</ListItemText>
-						</ListItem>
-					</Link>
+					<ListItem button to="/about" component={Link}>
+						<ListItemText>About</ListItemText>
+					</ListItem>
+					<ListItem button to="/cores" component={Link}>
+						<ListItemText>Cores</ListItemText>
+					</ListItem>
+					<ListItem button to="/inbre" component={Link}>
+						<ListItemText>Inbre</ListItemText>
+					</ListItem>
+					<ListItem button to="nih" component={Link}>
+						<ListItemText>Nih Research</ListItemText>
+					</ListItem>
 				</List>
 			</Drawer>
 		</Fragment>
