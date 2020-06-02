@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { Grid, Typography, Container } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
-import homePageImg from './assets/HomePage.jpg';
+import homePageImg from '../assets/HomePage.jpg';
 import ImageFilter from 'react-image-filter';
 
 const useStyles = makeStyles({
