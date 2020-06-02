@@ -4,8 +4,8 @@ import { BrowserRouter as ReactRouter } from 'react-router-dom';
 import { makeStyles, ThemeProvider } from '@material-ui/styles';
 import { CssBaseline } from '@material-ui/core';
 import Router from './Router';
-import Header from './Header';
-import HomePage from './HomePage';
+import Header from './components/Header';
+import HomePage from './components/HomePage';
 import theme from './theme/theme';
 
 const useStyles = makeStyles({

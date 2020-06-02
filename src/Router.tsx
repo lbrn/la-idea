@@ -1,10 +1,10 @@
 import React from 'react'
 import {Switch, Route} from 'react-router-dom';
-import HomePage from './HomePage';
-import About from './About'
-import Nih from './Nih';
-import Inbre from './Inbre';
-import Cores from './Cores';
+import HomePage from './components/HomePage';
+import About from './components/About'
+import Nih from './components/Nih';
+import Inbre from './components/Inbre';
+import Cores from './components/Cores';
 
 const Routes = () => {
 	return (
