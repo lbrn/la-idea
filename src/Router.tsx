@@ -1,31 +1,35 @@
-import React from 'react'
-import {Switch, Route} from 'react-router-dom';
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 import HomePage from './components/HomePage';
-import About from './components/About'
+import About from './components/About';
 import Nih from './components/Nih';
 import Inbre from './components/Inbre';
 import Cores from './components/Cores';
+import Resources from './components/Resources';
 
 const Routes = () => {
 	return (
 		<Switch>
 			<Route path="/about">
-				<About/>
+				<About />
 			</Route>
 			<Route path="/cores">
-				<Cores/>
+				<Cores />
 			</Route>
 			<Route path="/inbre">
-				<Inbre/>
+				<Inbre />
 			</Route>
 			<Route path="/nih">
-				<Nih/>
+				<Nih />
+			</Route>
+			<Route path="/resources">
+				<Resources />
 			</Route>
 			<Route path="/">
-				<HomePage/>
+				<HomePage />
 			</Route>
 		</Switch>
-	)
-}
+	);
+};
 
-export default Routes
+export default Routes;

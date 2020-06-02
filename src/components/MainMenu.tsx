@@ -67,10 +67,13 @@ const MainMenu = () => {
 						<ListItemText>Cores</ListItemText>
 					</ListItem>
 					<ListItem button to="/inbre" component={Link}>
-						<ListItemText>Inbre</ListItemText>
+						<ListItemText>INBRE</ListItemText>
 					</ListItem>
 					<ListItem button to="nih" component={Link}>
-						<ListItemText>Nih Research</ListItemText>
+						<ListItemText>NIH Research</ListItemText>
+					</ListItem>
+					<ListItem button to="resources" component={Link}>
+						<ListItemText>Resources</ListItemText>
 					</ListItem>
 				</List>
 			</Drawer>
