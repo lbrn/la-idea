@@ -6,7 +6,6 @@ import {
 	Typography,
 	CardContent,
 	Button,
-	CardActionArea,
 	CardActions,
 } from '@material-ui/core';
 
@@ -16,19 +15,10 @@ import card from '../../types/card';
 const useStyles = makeStyles({
 	media: {
 		height: 140,
-		transition: 'mixBlendMode .5s',
-		opacity: .75,
-		// mixBlendMode: 'hard-light',
-		'&:hover': {
-			mixBlendMode: 'normal',
-		},
+		opacity: 0.75,
 	},
 	mediaCont: {
 		background: theme.palette.primary.main,
-		transition: '.5s',
-		'&:hover': {
-			backgroundOpacity: 0,
-		},
 	},
 });
 
