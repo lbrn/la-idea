@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { Grid, Typography, Container } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
-import homePageImg from '../assets/HomePage.jpg';
+import { hero } from '../assets/index';
 import ImageFilter from 'react-image-filter';
 
 const useStyles = makeStyles({
@@ -20,7 +20,7 @@ const HomePage = () => {
 					<ImageFilter
 						preserveAspectRatio="cover"
 						className={classes.homeImage}
-						image={homePageImg}
+						image={hero}
 						filter={'duotone'}
 						colorOne={[0, 0, 0]}
 						colorTwo={[175, 23, 11]}

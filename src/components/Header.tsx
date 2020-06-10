@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import MainMenu from './MainMenu';
 import theme from '../theme/theme';
-import logo from '../assets/logo.png';
+import { logo } from '../assets/index';
 
 const useStyles = makeStyles({
 	title: {

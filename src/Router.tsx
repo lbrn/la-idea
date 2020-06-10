@@ -6,6 +6,8 @@ import Nih from './components/Nih';
 import Inbre from './components/Inbre';
 import Cores from './components/Cores';
 import Resources from './components/Resources';
+import AwardInformation from './components/AwardInformation';
+import Awards from './components/awards/Awards';
 
 const Routes = () => {
 	return (
@@ -19,11 +21,17 @@ const Routes = () => {
 			<Route path="/inbre">
 				<Inbre />
 			</Route>
+			<Route path="/award-information">
+				<AwardInformation />
+			</Route>
 			<Route path="/nih">
 				<Nih />
 			</Route>
 			<Route path="/resources">
 				<Resources />
+			</Route>
+			<Route path="/awards">
+				<Awards />
 			</Route>
 			<Route path="/">
 				<HomePage />

@@ -31,7 +31,10 @@ const MainMenu = () => {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 
 	const handleKeyPress = (e: KeyboardEvent) => {
-		if (e.type === 'keydown' && (e.key === 'Tab' || e.key === 'Shift' || e.key === 'Enter')) {
+		if (
+			e.type === 'keydown' &&
+			(e.key === 'Tab' || e.key === 'Shift' || e.key === 'Enter')
+		) {
 			return;
 		}
 		setIsOpen(false);
@@ -68,6 +71,9 @@ const MainMenu = () => {
 					</ListItem>
 					<ListItem button to="/inbre" component={Link}>
 						<ListItemText>INBRE</ListItemText>
+					</ListItem>
+					<ListItem button to="/award-information" component={Link}>
+						<ListItemText>Award Information</ListItemText>
 					</ListItem>
 					<ListItem button to="nih" component={Link}>
 						<ListItemText>NIH Research</ListItemText>
