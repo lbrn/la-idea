@@ -8,7 +8,7 @@ import CardWrapper from './CardWrapper';
 const Cards = () => {
 	const createCards = (datas: card[]) => {
 		return datas.map((data) => (
-			<Grid item xs={6} md={4}>
+			<Grid item xs={12} sm={6} md={4}>
 				<CardWrapper
 					img={data.img}
 					title={data.title}
