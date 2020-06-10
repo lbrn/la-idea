@@ -9,30 +9,30 @@ import {
 	CardActionArea,
 	CardActions,
 } from '@material-ui/core';
+
 import theme from '../../theme/theme';
+import card from '../../types/card';
 
 const useStyles = makeStyles({
 	media: {
 		height: 140,
-		mixBlendMode: 'luminosity', // multiply also looks good here
-		transition: 'all .5s ease',
+		transition: 'mixBlendMode .5s',
+		opacity: .75,
+		// mixBlendMode: 'hard-light',
 		'&:hover': {
 			mixBlendMode: 'normal',
 		},
 	},
 	mediaCont: {
 		background: theme.palette.primary.main,
+		transition: '.5s',
+		'&:hover': {
+			backgroundOpacity: 0,
+		},
 	},
 });
 
-interface cardWrapper {
-	imgTitle: string;
-	title: string;
-	img: string;
-	link: string;
-}
-
-const CardWrapper = ({ title, imgTitle, img, link }: cardWrapper) => {
+const CardWrapper = ({ title, imgTitle, img, link, id }: card) => {
 	const classes = useStyles();
 	return (
 		<Card>
@@ -40,15 +40,13 @@ const CardWrapper = ({ title, imgTitle, img, link }: cardWrapper) => {
 				<CardMedia image={img} title={imgTitle} className={classes.media} />
 			</div>
 			<CardContent>
-				<Typography variant="h5">{title}</Typography>
+				<Typography variant="h6">{title}</Typography>
 			</CardContent>
-			<CardActionArea>
-				<CardActions>
-					<Button size="small" color="primary" href={link}>
-						View
-					</Button>
-				</CardActions>
-			</CardActionArea>
+			<CardActions>
+				<Button size="small" color="primary" href={link}>
+					View
+				</Button>
+			</CardActions>
 		</Card>
 	);
 };

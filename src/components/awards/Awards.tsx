@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/styles';
 
 import CardWrapper from './CardWrapper';
 import { demoPicture } from '../../assets/index';
+import Cards from './Cards';
 
 const useStyles = makeStyles({
 	title: {
@@ -22,22 +23,7 @@ const Awards = () => {
 					</Typography>
 				</Grid>
 				<Grid container item xs={12} spacing={3}>
-					<Grid item xs={6}>
-						<CardWrapper
-							title="demo title"
-							imgTitle="demo imgTitle"
-							img={demoPicture}
-							link={"https://google.com"}
-						/>
-					</Grid>
-					<Grid item xs={6}>
-						<CardWrapper
-							title="demo title"
-							imgTitle="demo imgTitle"
-							img={demoPicture}
-							link={"https://google.com"}
-						/>
-					</Grid>
+					<Cards />
 				</Grid>
 			</Grid>
 		</Container>
