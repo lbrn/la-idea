@@ -5,7 +5,11 @@ import { cardData } from './CardData';
 import card from '../../types/card';
 import CardWrapper from './CardWrapper';
 
-const Cards = () => {
+interface cards{
+	cardData: card[];
+}
+
+const Cards = ({cardData}: cards) => {
 	const createCards = (datas: card[]) => {
 		return datas.map((data) => (
 			<Grid item xs={12} sm={6} md={4}>

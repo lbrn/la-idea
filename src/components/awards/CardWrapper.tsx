@@ -46,12 +46,14 @@ const CardWrapper = ({
 			</div>
 			<CardContent>
 				<Typography variant="h6">{title}</Typography>
-				<Link variant="body1" href={institutionLink}>{institution}</Link> <br/>
 				<Link variant="body2" href={investigatorLink}>{investigator}</Link>
 			</CardContent>
 			<CardActions>
 				<Button size="small" color="primary" href={grantLink}>
 					View
+				</Button>
+				<Button size="small" color="primary" href={institutionLink}>
+					{institution}
 				</Button>
 			</CardActions>
 		</Card>
