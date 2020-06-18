@@ -10,12 +10,16 @@ const Cards = () => {
 		return datas.map((data) => (
 			<Grid item xs={12} sm={6} md={4}>
 				<CardWrapper
-					img={data.img}
-					title={data.title}
-					imgTitle={data.imgTitle}
+					grantLink={data.grantLink}
 					id={data.id}
-					link={data.link}
+					img={data.img}
+					imgTitle={data.imgTitle}
+					institution={data.institution}
+					institutionLink={data.institutionLink}
+					investigator={data.investigator}
+					investigatorLink={data.investigatorLink}
 					key={data.id}
+					title={data.title}
 				/>
 			</Grid>
 		));

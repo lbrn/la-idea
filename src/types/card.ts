@@ -1,7 +1,11 @@
 export default interface cardWrapper {
-	imgTitle: string;
-	title: string;
-	img: string;
-	link: string;
+	grantLink: string;
 	id: string;
+	img: string;
+	imgTitle: string;
+	institution: string;
+	institutionLink: string;
+	investigator: string;
+	investigatorLink: string;
+	title: string;
 }
