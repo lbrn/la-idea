@@ -5,7 +5,7 @@ import About from './components/About';
 import Nih from './components/Nih';
 import Inbre from './components/Inbre';
 import Cores from './components/Cores';
-import Resources from './components/Resources';
+import Resources from './components/resources/Resources';
 import AwardInformation from './components/AwardInformation';
 import Awards from './components/awards/Awards';
 
