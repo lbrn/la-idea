@@ -69,9 +69,6 @@ const MainMenu = () => {
 					<ListItem button to="/cores" component={Link}>
 						<ListItemText>Cores</ListItemText>
 					</ListItem>
-					<ListItem button to="/inbre" component={Link}>
-						<ListItemText>INBRE</ListItemText>
-					</ListItem>
 					<ListItem button to="/award-information" component={Link}>
 						<ListItemText>Award Information</ListItemText>
 					</ListItem>

@@ -14,6 +14,7 @@ const Cards = ({cardData}: cards) => {
 		return datas.map((data) => (
 			<Grid item xs={12} sm={6} md={4}>
 				<CardWrapper
+					awardType={data.awardType}
 					grantLink={data.grantLink}
 					id={data.id}
 					img={data.img}
