@@ -3,3 +3,4 @@ export const laRepresentatives = require('./laRepresentatives.png');
 export const laSenators = require('./laSenators.png');
 export const naipi = require('./naipi.png');
 export const nihGrants = require('./nihGrants.png');
+export const idea = require('./idea.png');

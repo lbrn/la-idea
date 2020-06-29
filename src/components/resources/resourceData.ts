@@ -4,6 +4,7 @@ import {
 	laSenators,
 	naipi,
 	nihGrants,
+	idea
 } from '../../assets/resources/index';
 
 export interface resourceCard {
@@ -23,9 +24,11 @@ export const resourceData: resourceCard[] = [
 	{
 		img: laRegents,
 		title: 'NIGMS Grants and Funding',
+		imgTitle: 'NIGMS Grants and Funding',
 		link: 'https://www.nigms.nih.gov/grants/Pages/Funding.aspx?tab=All',
 	},
 	{
+		img: laRegents,
 		title: 'LA Board of Regents',
 		imgTitle: 'LA Board of Regents',
 		link: 'https://regents.la.gov/',
@@ -50,6 +53,8 @@ export const resourceData: resourceCard[] = [
 		link: 'http://www.naipi.org/',
 	},
 	{
+		img: idea,
+		imgTitle: "IDEA",
 		title: 'IDeA',
 		link: 'https://www.nigms.nih.gov/research/drcb/IDeA/Pages/INBRE.aspx',
 	},

@@ -37,6 +37,7 @@ const useStyles = makeStyles({
 type cardWrapper = Pick<
 	card,
 	| 'title'
+	| 'awardType'
 	| 'imgTitle'
 	| 'img'
 	| 'grantLink'
@@ -49,7 +50,6 @@ type cardWrapper = Pick<
 const CardWrapper = ({
 	awardType,
 	grantLink,
-	id,
 	img,
 	imgTitle,
 	institution,
@@ -57,7 +57,7 @@ const CardWrapper = ({
 	investigator,
 	investigatorLink,
 	title,
-}: card) => {
+}: cardWrapper) => {
 	const classes = useStyles();
 	return (
 		<Card className={classes.card}>

@@ -19,12 +19,14 @@ import {
 	regulationOcular,
 	timingControl,
 	visceralAdipose,
-} from '../../assets/awards/index'; // TODO:
-// take images for all award cards
-// create image titles for all award cards
+} from '../../assets/awards/index'; 
+
+// TODO:
+// Award type for research projects?
 export const cardData: card[] = [
 	{
 		// ids are the project ids from NIH
+		awardType: "COBRE",
 		id: '5P30GM110703-05',
 		img: cmtv,
 		imgTitle: 'CMTV',
@@ -41,16 +43,11 @@ export const cardData: card[] = [
 		fundingAmount: 963192,
 	},
 	{
+		id: "5P30GM110760-05",
 		title: 'Center for Experimental Infectious Disease Research',
-		imgTitle: 'homepage',
-		investigator: "Unknown",
-		investigatorLink: "",
-		institution: "LSU",
 		awardType: "COBRE",
-		institutionLink: "https://www.lsu.edu/",
 		img: ceidr,
 		imgTitle: 'CEIDR',
-		title: 'Center For Experimental Infectious Disease Research',
 		investigator: 'Dr. Joel Baines',
 		investigatorLink:
 			'https://www.lsuhs.edu/departments/school-of-graduate-studies/microbiology-and-immunology/research/sapp-lab',
@@ -67,6 +64,7 @@ export const cardData: card[] = [
 		img: cardioVascular,
 		imgTitle: 'Mentoring in Cardiovascular Biology',
 		title: 'Mentoring In Cardiovascular Biology',
+		awardType: "COBRE",
 		investigator: 'Dr. Daniel Kapusta',
 		investigatorLink:
 			'https://www.medschool.lsuhsc.edu/neuroscience/faculty_detail.aspx?name=kapusta_daniel',
@@ -81,6 +79,7 @@ export const cardData: card[] = [
 	{
 		id: '1R15DK118515-01',
 		img: insulinResistance,
+		awardType: "UNKNOWN",
 		imgTitle: 'Peripheral Insulin Resistance',
 		title: 'Peripheral Insulin Resistance',
 		investigator: 'Dr. Matthew Talbert',
@@ -96,6 +95,7 @@ export const cardData: card[] = [
 	},
 	{
 		id: '5P20GM103424-18',
+		awardType: "INBRE",
 		img: lbrn,
 		imgTitle: 'LBRN',
 		title: 'Louisiana Biological Research Network',
@@ -112,6 +112,7 @@ export const cardData: card[] = [
 	},
 	{
 		id: '5U54GM104940-04',
+		awardType: "UNKNOWN",
 		img: laCats,
 		imgTitle: 'LACATS',
 		title: 'Louisiana Clinical And Translational Science Center',
@@ -128,6 +129,7 @@ export const cardData: card[] = [
 	},
 	{
 		id: '5P30GM114732-05',
+		awardType: "COBRE",
 		img: mTranslational,
 		imgTitle: 'Mentoring Translational Researchers In Louisiana',
 		title: 'Mentoring Translational Researchers In Louisiana',
@@ -145,6 +147,7 @@ export const cardData: card[] = [
 	{
 		id: '5P30GM118430-04',
 		img: mObesity,
+		awardType: "COBRE",
 		imgTitle: 'Mentoring Obesity And Diabetes Research In Louisiana',
 		title: 'Mentoring Obesity And Diabetes Research In Louisiana',
 		investigator: 'Dr. Thomas Gettys',
@@ -160,6 +163,7 @@ export const cardData: card[] = [
 	},
 	{
 		id: '2R01EY021862-07A1',
+		awardType: "UNKNOWN",
 		img: regulationOcular,
 		imgTitle: 'Regulation Of Ocular Angiogenesis By Micrornas',
 		title: 'Regulation Of Ocular Angiogenesis By Micrornas',
@@ -176,6 +180,7 @@ export const cardData: card[] = [
 	},
 	{
 		id: '5R01HD096070-02',
+		awardType: "UNKNOWN",
 		img: maternalMortality,
 		imgTitle: 'Impact Of State-Level Policies On Maternal Mortality',
 		title: 'Impact Of State-Level Policies On Maternal Mortality',
@@ -192,6 +197,7 @@ export const cardData: card[] = [
 	},
 	{
 		id: '5R01GM124018-02',
+		awardType: "Research",
 		img: timingControl,
 		imgTitle: 'Timing Control Of Centromeric Cohesion',
 		title: 'Timing Control Of Centromeric Cohesion',
@@ -209,6 +215,7 @@ export const cardData: card[] = [
 	{
 		id: '1R15DK122383-01',
 		img: visceralAdipose,
+		awardType: "Research",
 		imgTitle: 'Visceral Adipose Tissue',
 		title: 'Visceral Adipose Tissue',
 		investigator: 'Dr. Xing Fu',
@@ -225,6 +232,7 @@ export const cardData: card[] = [
 	{
 		id: '5P20GM130555-02',
 		img: clbd,
+		awardType: "COBRE",
 		imgTitle: 'CLBD',
 		title: 'Center for Lung Biology and Disease',
 		investigator: 'Dr. Samithamby "Jey" Jeyaseelan',
@@ -241,6 +249,7 @@ export const cardData: card[] = [
 	{
 		id: '5P20GM121307-03',
 		img: centerRedox,
+		awardType: "COBRE",
 		imgTitle: 'Center for Redox Biology',
 		title: 'Center for Redox Biology and Cardiovascular Disease',
 		investigator: 'Dr. Christopher Kevil',
@@ -256,6 +265,7 @@ export const cardData: card[] = [
 	{
 		id: '1P20GM135002-01',
 		img: metabolicBasis,
+		awardType: "COBRE",
 		imgTitle: 'Metabolic Basis of Disease',
 		title: 'Metabolic Basis of Disease',
 		investigator: 'Dr. Jacqueline Stephens',
@@ -271,6 +281,7 @@ export const cardData: card[] = [
 	},
 	{
 		id: '5P20GM109036-05',
+		awardType: "COBRE",
 		img: cardioMetabolic,
 		imgTitle: 'Tulane Cobre For Cardiometabolic Diseases',
 		title: 'Tulane Cobre For Cardiometabolic Diseases',
@@ -287,6 +298,7 @@ export const cardData: card[] = [
 	{
 		id: '5P20GM103629-09',
 		img: aging,
+		awardType: "COBRE",
 		imgTitle: 'Mentoring Research Excellence In Aging And Regenerative Medicine',
 		title: 'Mentoring Research Excellence In Aging And Regenerative Medicine',
 		investigator: 'Dr. Michal Jazwinski',
@@ -303,6 +315,7 @@ export const cardData: card[] = [
 	{
 		id: '3P20GM103424-18S1',
 		img: lbrn,
+		awardType: "INBRE",
 		imgTitle: 'LBRN',
 		title: 'Louisiana Biomedical Research Network',
 		investigator: 'Dr. Konstantin Kousoulas',
@@ -315,17 +328,5 @@ export const cardData: card[] = [
 			'https://projectreporter.nih.gov/project_info_description.cfm?aid=9981342',
 		district: 'LA-06',
 		fundingAmount: 152100,
-	},
-	{
-		title: 'INBRE Award',
-		imgTitle: 'Louisiana Biological Research Network',
-		investigator: "Gus Kousoulas",
-		investigatorLink: "https://cehs.unl.edu/npod/gus-kousoulas/",
-		institution: "LSU",
-		awardType: "INBRE",
-		institutionLink: "https://lsu.edu",
-		img: ctvo,
-		grantLink: 'https://lbrn.lsu.edu',
-		id: 'lbrn-card-data',
 	},
 ];
