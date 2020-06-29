@@ -54,6 +54,23 @@ const Awards = () => {
 		return data.filter((card: card) => card.institution === filter);
 	}
 
+	// TODO: refactor
+	function createMenuItems(data: card[]) {
+		const unique = (arr: any) =>
+			arr.filter(
+				(value: string, i: number, self: any) => self.indexOf(value) === i
+			);
+
+		const institutions = data.map((i) => i.institution);
+		const uniqueInstitutions = unique(institutions);
+		console.log(uniqueInstitutions);
+		return uniqueInstitutions.map((institution: string, i: any) => (
+			<MenuItem key={i} value={institution}>
+				{institution}
+			</MenuItem>
+		));
+	}
+
 	const classes = useStyles();
 	return (
 		<Container>
@@ -72,14 +89,10 @@ const Awards = () => {
 							value={institutionFilter}
 							onChange={(e) => handleInstitutionFilter(e)}
 						>
-							<MenuItem value={'LSU'}>LSU</MenuItem>
-							<MenuItem value={'LSUHSC'}>LSUHSC</MenuItem>
-							<MenuItem value={'Pennington Biomedical'}>
-								Pennington Biomedical
-							</MenuItem>
-							<MenuItem value={''}>
+							<MenuItem key="all" value="">
 								All
 							</MenuItem>
+							{createMenuItems(cardData)}
 						</Select>
 					</FormControl>
 				</Grid>
