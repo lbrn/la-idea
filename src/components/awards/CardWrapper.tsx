@@ -25,6 +25,13 @@ const useStyles = makeStyles({
 	mediaCont: {
 		background: theme.palette.primary.main,
 	},
+	card: {
+		'&:hover': {
+			media: {
+				opacity: 1,
+			},
+		},
+	},
 });
 
 type cardWrapper = Pick<
@@ -40,26 +47,35 @@ type cardWrapper = Pick<
 >;
 
 const CardWrapper = ({
-	title,
-	imgTitle,
-	img,
+	awardType,
 	grantLink,
-	investigator,
-	investigatorLink,
+	id,
+	img,
+	imgTitle,
 	institution,
 	institutionLink,
-}: cardWrapper) => {
+	investigator,
+	investigatorLink,
+	title,
+}: card) => {
 	const classes = useStyles();
 	return (
-		<Card>
+		<Card className={classes.card}>
 			<div className={classes.mediaCont}>
-				<CardMedia image={img} title={imgTitle} className={classes.media} />
+				<CardMedia
+					image={img}
+					title={imgTitle}
+					className={classes.media}
+					component={Link}
+					href={grantLink}
+				/>
 			</div>
 			<CardContent>
 				<Typography variant="h6">{title}</Typography>
-				{<Link variant="body2" href={investigatorLink}>
+				<Link variant="body2" href={investigatorLink}>
 					{investigator}
-				</Link>}
+				</Link>
+				<Typography variant="body1">{awardType}</Typography>
 			</CardContent>
 			<CardActions>
 				<Button size="small" color="primary" href={grantLink}>

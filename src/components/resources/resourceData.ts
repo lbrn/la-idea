@@ -22,6 +22,10 @@ export const resourceData: resourceCard[] = [
 	},
 	{
 		img: laRegents,
+		title: 'NIGMS Grants and Funding',
+		link: 'https://www.nigms.nih.gov/grants/Pages/Funding.aspx?tab=All',
+	},
+	{
 		title: 'LA Board of Regents',
 		imgTitle: 'LA Board of Regents',
 		link: 'https://regents.la.gov/',
@@ -44,5 +48,9 @@ export const resourceData: resourceCard[] = [
 		title: 'NAIPI',
 		imgTitle: 'NAIPI',
 		link: 'http://www.naipi.org/',
+	},
+	{
+		title: 'IDeA',
+		link: 'https://www.nigms.nih.gov/research/drcb/IDeA/Pages/INBRE.aspx',
 	},
 ];

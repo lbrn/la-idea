@@ -1,4 +1,5 @@
-export default interface cardWrapper {
+export default interface card {
+	awardType: string;
 	grantLink: string;
 	id: string;
 	img: string;
