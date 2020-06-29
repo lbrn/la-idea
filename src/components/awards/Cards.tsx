@@ -1,7 +1,7 @@
 import React, { useState, Fragment } from 'react';
 import { Grid } from '@material-ui/core';
 
-import { cardData } from './CardData';
+import { cardData } from './cardData';
 import card from '../../types/card';
 import CardWrapper from './CardWrapper';
 
@@ -15,7 +15,6 @@ const Cards = ({ cardData }: cards) => {
 			<Grid item xs={12} sm={6} md={4} key={data.id}>
 				<CardWrapper
 					grantLink={data.grantLink}
-					id={data.id}
 					img={data.img}
 					imgTitle={data.imgTitle}
 					institution={data.institution}

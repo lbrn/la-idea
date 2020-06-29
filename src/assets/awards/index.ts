@@ -1,6 +1,7 @@
-export const aging = require('./aging');
-export const cardioMetabolic = require('./cardioMetabolic');
+export const aging = require('./aging.png');
+export const cardioMetabolic = require('./cardioMetabolic.png');
 export const cardioVascular = require('./cardioVascular.png')
+export const centerRedox = require('./centerRedoxBiology.png')
 export const ceidr = require('./ceidr.png');
 export const clbd = require('./clbd.png');
 export const cmtv = require('./cmtv.png');
