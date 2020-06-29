@@ -5,14 +5,14 @@ import { cardData } from './CardData';
 import card from '../../types/card';
 import CardWrapper from './CardWrapper';
 
-interface cards{
+interface cards {
 	cardData: card[];
 }
 
-const Cards = ({cardData}: cards) => {
+const Cards = ({ cardData }: cards) => {
 	const createCards = (datas: card[]) => {
 		return datas.map((data) => (
-			<Grid item xs={12} sm={6} md={4}>
+			<Grid item xs={12} sm={6} md={4} key={data.id}>
 				<CardWrapper
 					grantLink={data.grantLink}
 					id={data.id}
@@ -22,7 +22,6 @@ const Cards = ({cardData}: cards) => {
 					institutionLink={data.institutionLink}
 					investigator={data.investigator}
 					investigatorLink={data.investigatorLink}
-					key={data.id}
 					title={data.title}
 				/>
 			</Grid>
