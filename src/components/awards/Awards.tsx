@@ -30,21 +30,31 @@ const useStyles = makeStyles({
 const Awards = () => {
 	const [filteredData, setFilteredData] = useState(cardData);
 	const [institutionFilter, setInstitutionFilter] = useState('');
+	const [fiscalFilter, setFiscalFilter] = useState('');
 
 	useEffect(() => {
 		handleFilterData(filterByInstitution, institutionFilter, cardData);
 	}, [institutionFilter]);
 
+	useEffect(() => {
+		handleFilterData(filterByFiscalYear, fiscalFilter, cardData);
+	}, [fiscalFilter]);
+
 	const handleInstitutionFilter = (e: any) => {
 		setInstitutionFilter(e.target.value);
 	};
 
+	const handleFiscalFilter = (e: any) => {
+		setFiscalFilter(e.target.value);
+	};
+
 	function handleFilterData(
-		filterFunction: (data: card[], filter: string) => card[],
-		filter: string,
+		filterFunction: (data: card[], filter: any) => card[],
+		filter: string | number,
 		data: card[]
 	) {
 		const filtered = filterFunction(data, filter);
+		console.log(filtered);
 		setFilteredData(filtered);
 	}
 
@@ -52,19 +62,25 @@ const Awards = () => {
 		return data.filter((card: card) => card.institution === filter);
 	}
 
-	// TODO: refactor
-	function createMenuItems(data: card[]) {
-		const unique = (arr: any) =>
-			arr.filter(
-				(value: string, i: number, self: any) => self.indexOf(value) === i
-			);
+	function filterByFiscalYear(data: card[], filter: number) {
+		return data.filter((card: card) => card.fiscalYear == filter);
+	}
 
-		const institutions = data.map((i) => i.institution);
-		const uniqueInstitutions = unique(institutions);
-		console.log(uniqueInstitutions);
-		return uniqueInstitutions.map((institution: string, i: any) => (
-			<MenuItem key={i} value={institution}>
-				{institution}
+	// TODO: refactor
+	function createMenuItems(
+		data: card[],
+		targetValue: 'institution' | 'fiscalYear'
+	) {
+		const unique = (arr: any) => {
+			return arr.filter((item: any, i: number, self: any) => {
+				return self.indexOf(item) === i;
+			});
+		};
+		const items = data.map((i: card) => i[targetValue]);
+		const uniqueItems = unique(items);
+		return uniqueItems.map((value: string) => (
+			<MenuItem key={value} value={value}>
+				{value}
 			</MenuItem>
 		));
 	}
@@ -90,12 +106,30 @@ const Awards = () => {
 							<MenuItem key="all" value="">
 								All
 							</MenuItem>
-							{createMenuItems(cardData)}
+							{createMenuItems(cardData, 'institution')}
+						</Select>
+					</FormControl>
+					<FormControl className={classes.formControl}>
+						<InputLabel id="simple-select-label">Fiscal Year</InputLabel>
+						<Select
+							labelId="simple-select-label"
+							id="simple-select"
+							value={fiscalFilter}
+							onChange={(e) => handleFiscalFilter(e)}
+						>
+							<MenuItem key="all" value="">
+								All
+							</MenuItem>
+							{createMenuItems(cardData, 'fiscalYear')}
 						</Select>
 					</FormControl>
 				</Grid>
 				<Grid container item xs={12} spacing={3}>
-					<Cards cardData={institutionFilter ? filteredData : cardData} />
+					<Cards
+						cardData={
+							institutionFilter || fiscalFilter ? filteredData : cardData
+						}
+					/>
 				</Grid>
 			</Grid>
 		</Container>
