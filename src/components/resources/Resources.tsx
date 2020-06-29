@@ -7,23 +7,43 @@ import {
 	CardActions,
 	Button,
 	CardContent,
+	CardMedia,
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 
-import { resourceData } from './resourceData';
+import { resourceData, resourceCard } from './resourceData';
+import theme from '../../theme/theme';
 
 const useStyles = makeStyles({
 	title: {
 		marginTop: 50,
 	},
+	media: {
+		height: 140,
+		opacity: 0.75,
+		transition: '.3s all',
+		'&:hover': {
+			opacity: 1,
+		},
+	},
+	mediaCont: {
+		background: theme.palette.primary.main,
+	},
 });
 
 const Resources = () => {
 	const classes = useStyles();
-	const createResources = (data: any) => {
+	const createResources = (data: resourceCard[]) => {
 		return data.map((item: any) => (
-			<Grid item xs={6} sm={4}>
+			<Grid item xs={6}>
 				<Card>
+					<div className={classes.mediaCont}>
+						<CardMedia
+							image={item.img}
+							title={item.imgTitle}
+							className={classes.media}
+						/>
+					</div>
 					<CardContent>
 						<Typography variant="h6">{item.title}</Typography>
 					</CardContent>
