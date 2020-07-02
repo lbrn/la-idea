@@ -50,7 +50,7 @@ const AwardInformation = () => {
 							<Typography>Institutions</Typography>
 						</ExpansionPanelSummary>
 					</ExpansionPanel>
-					<ExpansionPanel disabled>
+					{/* <ExpansionPanel disabled>
 						<ExpansionPanelSummary
 							expandIcon={<ExpandMoreIcon />}
 							id="senators-content"
@@ -67,7 +67,7 @@ const AwardInformation = () => {
 						>
 							<Typography>US Representatives</Typography>
 						</ExpansionPanelSummary>
-					</ExpansionPanel>
+					</ExpansionPanel> */}
 					<ExpansionPanel disabled>
 						<ExpansionPanelSummary
 							expandIcon={<ExpandMoreIcon />}
