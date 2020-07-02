@@ -1,7 +1,7 @@
 import React, { useState, Fragment } from 'react';
 import { Grid } from '@material-ui/core';
 
-import { cardData } from './cardData';
+import { cardData } from './newestCardData';
 import card from '../../types/card';
 import CardWrapper from './CardWrapper';
 

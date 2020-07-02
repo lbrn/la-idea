@@ -13,7 +13,7 @@ import { makeStyles } from '@material-ui/styles';
 
 import card from '../../types/card';
 import theme from '../../theme/theme';
-import { cardData } from './cardData';
+import { cardData } from './newestCardData';
 import Cards from './Cards';
 
 const useStyles = makeStyles({
