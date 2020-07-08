@@ -66,15 +66,15 @@ const MainMenu = () => {
 					<ListItem button to="/about" component={Link}>
 						<ListItemText>About</ListItemText>
 					</ListItem>
-					<ListItem button to="/cores" component={Link}>
+					{/* <ListItem button to="/cores" component={Link}>
 						<ListItemText>Cores</ListItemText>
-					</ListItem>
+					</ListItem> */}
 					<ListItem button to="/award-information" component={Link}>
 						<ListItemText>Award Information</ListItemText>
 					</ListItem>
-					<ListItem button to="nih" component={Link}>
+					{/* <ListItem button to="nih" component={Link}>
 						<ListItemText>NIH Research</ListItemText>
-					</ListItem>
+					</ListItem> */}
 					<ListItem button to="resources" component={Link}>
 						<ListItemText>Resources</ListItemText>
 					</ListItem>

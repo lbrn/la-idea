@@ -30,7 +30,7 @@ const useStyles = makeStyles({
 const Awards = () => {
 	const [filteredData, setFilteredData] = useState(cardData);
 	const [institutionFilter, setInstitutionFilter] = useState('');
-	const [fiscalFilter, setFiscalFilter] = useState('');
+	const [fiscalFilter, setFiscalFilter] = useState(2020);
 
 	useEffect(() => {
 		handleFilterData(filterByInstitution, institutionFilter, cardData);

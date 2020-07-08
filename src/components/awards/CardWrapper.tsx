@@ -79,7 +79,7 @@ const CardWrapper = ({
 			</CardContent>
 			<CardActions>
 				<Button size="small" color="primary" href={grantLink}>
-					View
+					NIH Info
 				</Button>
 				<Button size="small" color="primary" href={institutionLink}>
 					{institution}

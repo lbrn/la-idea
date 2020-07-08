@@ -23,7 +23,7 @@ const AwardInformation = () => {
 			<Container>
 				<Grid item xs={12}>
 					<Typography variant="h4" className={classes.title}>
-						Award Information
+						NIH Award Information
 					</Typography>
 				</Grid>
 				<Grid item xs={12}>
@@ -68,7 +68,7 @@ const AwardInformation = () => {
 							<Typography>US Representatives</Typography>
 						</ExpansionPanelSummary>
 					</ExpansionPanel> */}
-					<ExpansionPanel disabled>
+					{/* <ExpansionPanel disabled>
 						<ExpansionPanelSummary
 							expandIcon={<ExpandMoreIcon />}
 							id="regents-content"
@@ -76,7 +76,7 @@ const AwardInformation = () => {
 						>
 							<Typography>LA Board of Regents</Typography>
 						</ExpansionPanelSummary>
-					</ExpansionPanel>
+					</ExpansionPanel> */}
 				</Grid>
 			</Container>
 		</Grid>
