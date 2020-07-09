@@ -39,9 +39,9 @@ const useStyles = makeStyles({
 
 interface cardWrapper {
 	awardType?: string;
-	imageLink: string;
-	img: string;
-	imgTitle: string;
+	imageLink?: string;
+	img?: string;
+	imgTitle?: string;
 	secondaryAction?: string;
 	secondaryActionLink?: string;
 	primary: string;

@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid, Typography, Container } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 
-import { cardData } from '../components/awards/newestCardData';
+import { cardData } from '../data/newestCardData';
 import card from '../types/card';
 import CardWrapper from './awards/CardWrapper';
 import { institutionImages } from '../assets/institutions/index';
@@ -27,23 +27,27 @@ const Institutions = () => {
 		});
 
 		return uniqueData.map((card) => (
-			<CardWrapper
-				title={card.institution}
-				img={institutionImages[card.institutionCode]}
-				imageLink={card.institutionLink}
-				imgTitle={card.institution}
-				primary={card.institution}
-				primaryLink={card.institutionLink}
-			/>
+			<Grid item xs={12} sm={6}>
+				<CardWrapper
+					title={card.institution}
+					img={institutionImages[card.institutionCode]}
+					imageLink={card.institutionLink}
+					imgTitle={card.institution}
+					primary={card.institution}
+					primaryLink={card.institutionLink}
+				/>
+			</Grid>
 		));
 	};
 	return (
 		<Grid container>
 			<Container>
-				<Grid item xs={12}>
+				<Grid container xs={12} spacing={3}>
 					<Typography variant="h4" className={classes.title}>
 						Institutions
 					</Typography>
+				</Grid>{' '}
+				<Grid container xs={12} spacing={3}>
 					{cardData && createCards(cardData)}
 				</Grid>
 			</Container>

@@ -18,9 +18,9 @@ const Routes = () => {
 			{/* <Route path="/cores">
 				<Cores />
 			</Route> */}
-			{/* <Route path="/inbre">
-				<Inbre />
-			</Route> */}
+			<Route path="/investigators">
+				<Investigators />
+			</Route>
 			<Route path="/institutions">
 				<Institutions />
 			</Route>

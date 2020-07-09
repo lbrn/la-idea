@@ -1,4 +1,4 @@
-import card from '../../types/card';
+import card from '../types/card';
 
 import {
 	aging,
@@ -19,7 +19,7 @@ import {
 	regulationOcular,
 	timingControl,
 	visceralAdipose,
-} from '../../assets/awards/index'; 
+} from '../assets/awards/index'; 
 
 export const cardData: card[] = [
 	{
