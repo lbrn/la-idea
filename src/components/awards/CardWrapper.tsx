@@ -22,13 +22,13 @@ const useStyles = makeStyles({
 			opacity: 1,
 		},
 	},
+	img: {
+		objectPosition: 'left top',
+	},
 	mediaCont: {
 		background: theme.palette.primary.main,
 	},
 	card: {
-		media: {
-			backgroundPosition: 'left top',
-		},
 		'&:hover': {
 			media: {
 				opacity: 1,
@@ -67,7 +67,12 @@ const CardWrapper = ({
 		<Card className={classes.card}>
 			<a className={classes.mediaCont} href={imageLink} title={imgTitle}>
 				{img && (
-					<CardMedia image={img} className={classes.media} component="img" />
+					<CardMedia
+						image={img}
+						className={classes.media}
+						component="img"
+						classes={{ root: classes.img }}
+					/>
 				)}
 			</a>
 			<CardContent>
@@ -77,7 +82,9 @@ const CardWrapper = ({
 						{primary}
 					</Link>
 				)}
-				{awardType && <Typography variant="body1">{awardType}</Typography>}
+				{awardType && isGrant && (
+					<Typography variant="body1">{awardType}</Typography>
+				)}
 			</CardContent>
 			<CardActions>
 				{isGrant && (

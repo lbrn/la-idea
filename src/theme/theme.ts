@@ -16,6 +16,7 @@ const theme = createMuiTheme({
 		},
 		h6: {
 			fontFamily: 'Montserrat, Helvetica, sans',
+			lineHeight: 1.45,
 		},
 	},
 });
