@@ -65,9 +65,11 @@ const CardWrapper = ({
 	const classes = useStyles();
 	return (
 		<Card className={classes.card}>
-			<a className={classes.mediaCont} href={imageLink} title={imgTitle}>
+			<a className={classes.mediaCont} href={imageLink}>
 				{img && (
 					<CardMedia
+						alt={imgTitle}
+						title={imgTitle}
 						image={img}
 						className={classes.media}
 						component="img"

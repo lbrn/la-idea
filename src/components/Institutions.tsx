@@ -31,7 +31,7 @@ const Institutions = () => {
 				title={card.institution}
 				img={institutionImages[card.institutionCode]}
 				imageLink={card.institutionLink}
-				imgTitle={card.imgTitle}
+				imgTitle={card.institution}
 				primary={card.institution}
 				primaryLink={card.institutionLink}
 			/>
