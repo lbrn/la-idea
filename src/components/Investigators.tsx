@@ -8,17 +8,17 @@ const useStyles = makeStyles({
 	}
 })
 
-const Inbre = () => {
+const Investigators = () => {
 	const classes = useStyles();
 	return (
 		<Grid container>
 			<Container>
 				<Grid item xs={12}>
-					<Typography variant="h4" className={classes.title}>INBRE</Typography>
+					<Typography variant="h4" className={classes.title}>Investigators</Typography>
 				</Grid>
 			</Container>
 		</Grid>
 	);
 };
 
-export default Inbre;
+export default Investigators;

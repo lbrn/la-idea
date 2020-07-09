@@ -3,10 +3,11 @@ export default interface card {
 	grantLink: string;
 	id: string;
 	img: string;
+	imgTitle: string;
 	fiscalYear: number;
 	district: string;
-	imgTitle: string;
 	institution: string;
+	institutionCode: string;
 	institutionLink: string;
 	investigator: string;
 	investigatorLink: string;

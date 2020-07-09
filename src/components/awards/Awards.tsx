@@ -15,6 +15,7 @@ import card from '../../types/card';
 import theme from '../../theme/theme';
 import { cardData } from './newestCardData';
 import Cards from './Cards';
+import unique from '../../utility/unique';
 
 const useStyles = makeStyles({
 	title: {
@@ -63,7 +64,7 @@ const Awards = () => {
 	}
 
 	function filterByFiscalYear(data: card[], filter: number) {
-		return data.filter((card: card) => card.fiscalYear == filter);
+		return data.filter((card: card) => card.fiscalYear === filter);
 	}
 
 	// TODO: refactor
@@ -71,11 +72,6 @@ const Awards = () => {
 		data: card[],
 		targetValue: 'institution' | 'fiscalYear'
 	) {
-		const unique = (arr: any) => {
-			return arr.filter((item: any, i: number, self: any) => {
-				return self.indexOf(item) === i;
-			});
-		};
 		const items = data.map((i: card) => i[targetValue]);
 		const uniqueItems = unique(items);
 		return uniqueItems.map((value: string) => (

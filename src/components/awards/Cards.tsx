@@ -14,14 +14,15 @@ const Cards = ({ cardData }: cards) => {
 		return datas.map((data) => (
 			<Grid item xs={12} sm={6} md={4} key={data.id}>
 				<CardWrapper
+					isGrant={true}
 					awardType={data.awardType}
-					grantLink={data.grantLink}
+					imageLink={data.grantLink}
 					img={data.img}
 					imgTitle={data.imgTitle}
-					institution={data.institution}
-					institutionLink={data.institutionLink}
-					investigator={data.investigator}
-					investigatorLink={data.investigatorLink}
+					secondaryAction={data.institution}
+					secondaryActionLink={data.institutionLink}
+					primary={data.investigator}
+					primaryLink={data.investigatorLink}
 					title={data.title}
 				/>
 			</Grid>

@@ -26,6 +26,9 @@ const useStyles = makeStyles({
 		background: theme.palette.primary.main,
 	},
 	card: {
+		media: {
+			backgroundPosition: 'left top',
+		},
 		'&:hover': {
 			media: {
 				opacity: 1,
@@ -34,56 +37,59 @@ const useStyles = makeStyles({
 	},
 });
 
-type cardWrapper = Pick<
-	card,
-	| 'title'
-	| 'awardType'
-	| 'imgTitle'
-	| 'img'
-	| 'grantLink'
-	| 'investigator'
-	| 'investigatorLink'
-	| 'institution'
-	| 'institutionLink'
->;
+interface cardWrapper {
+	awardType?: string;
+	imageLink: string;
+	img: string;
+	imgTitle: string;
+	secondaryAction?: string;
+	secondaryActionLink?: string;
+	primary: string;
+	primaryLink: string;
+	title?: string;
+	isGrant?: boolean;
+}
 
 const CardWrapper = ({
 	awardType,
-	grantLink,
+	imageLink,
 	img,
 	imgTitle,
-	institution,
-	institutionLink,
-	investigator,
-	investigatorLink,
+	secondaryAction,
+	secondaryActionLink,
+	primary,
+	primaryLink,
+	isGrant,
 	title,
 }: cardWrapper) => {
 	const classes = useStyles();
 	return (
 		<Card className={classes.card}>
-			<div className={classes.mediaCont}>
-				<CardMedia
-					image={img}
-					title={imgTitle}
-					className={classes.media}
-					component={Link}
-					href={grantLink}
-				/>
-			</div>
+			<a className={classes.mediaCont} href={imageLink} title={imgTitle}>
+				{img && (
+					<CardMedia image={img} className={classes.media} component="img" />
+				)}
+			</a>
 			<CardContent>
 				<Typography variant="h6">{title}</Typography>
-				<Link variant="body2" href={investigatorLink}>
-					{investigator}
-				</Link>
-				<Typography variant="body1">{awardType}</Typography>
+				{primary && (
+					<Link variant="body2" href={primaryLink}>
+						{primary}
+					</Link>
+				)}
+				{awardType && <Typography variant="body1">{awardType}</Typography>}
 			</CardContent>
 			<CardActions>
-				<Button size="small" color="primary" href={grantLink}>
-					NIH Info
-				</Button>
-				<Button size="small" color="primary" href={institutionLink}>
-					{institution}
-				</Button>
+				{isGrant && (
+					<Button size="small" color="primary" href={imageLink}>
+						NIH Info
+					</Button>
+				)}
+				{secondaryAction && (
+					<Button size="small" color="primary" href={secondaryActionLink}>
+						{secondaryAction}
+					</Button>
+				)}
 			</CardActions>
 		</Card>
 	);

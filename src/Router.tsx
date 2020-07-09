@@ -3,8 +3,8 @@ import { Switch, Route } from 'react-router-dom';
 import HomePage from './components/HomePage';
 import About from './components/About';
 import Nih from './components/Nih';
-import Inbre from './components/Inbre';
-import Cores from './components/Cores';
+import Institutions from './components/Institutions';
+import Investigators from './components/Investigators';
 import Resources from './components/resources/Resources';
 import AwardInformation from './components/AwardInformation';
 import Awards from './components/awards/Awards';
@@ -15,18 +15,21 @@ const Routes = () => {
 			<Route path="/about">
 				<About />
 			</Route>
-			<Route path="/cores">
+			{/* <Route path="/cores">
 				<Cores />
-			</Route>
-			<Route path="/inbre">
+			</Route> */}
+			{/* <Route path="/inbre">
 				<Inbre />
+			</Route> */}
+			<Route path="/institutions">
+				<Institutions />
 			</Route>
 			<Route path="/award-information">
 				<AwardInformation />
 			</Route>
-			<Route path="/nih">
+			{/* <Route path="/nih">
 				<Nih />
-			</Route>
+			</Route> */}
 			<Route path="/resources">
 				<Resources />
 			</Route>

@@ -21,8 +21,6 @@ import {
 	visceralAdipose,
 } from '../../assets/awards/index'; 
 
-// TODO:
-// Award type for research projects?
 export const cardData: card[] = [
 	{
 		// ids are the project ids from NIH
@@ -35,6 +33,7 @@ export const cardData: card[] = [
 		investigatorLink:
 			'https://www.lsuhs.edu/departments/school-of-graduate-studies/microbiology-and-immunology/research/sapp-lab',
 		institution: 'LSUHSC Shreveport',
+		institutionCode: "lsuhs",
 		institutionLink: 'https://www.lsuhs.edu/',
 		fiscalYear: 2018,
 		district: 'LA-04',
@@ -52,6 +51,7 @@ export const cardData: card[] = [
 		investigatorLink:
 			'https://www.lsuhs.edu/departments/school-of-graduate-studies/microbiology-and-immunology/research/sapp-lab',
 		institution: 'LSU',
+		institutionCode: 'lsu',
 		institutionLink: 'https://www.lsuhsc.edu/',
 		fiscalYear: 2018,
 		district: 'LA-06',
@@ -69,6 +69,7 @@ export const cardData: card[] = [
 		investigatorLink:
 			'https://www.medschool.lsuhsc.edu/neuroscience/faculty_detail.aspx?name=kapusta_daniel',
 		institution: 'LSUHSC',
+		institutionCode: 'lsuhsc',
 		institutionLink: 'https://www.lsuhsc.edu/',
 		fiscalYear: 2018,
 		grantLink:
@@ -86,6 +87,7 @@ export const cardData: card[] = [
 		investigatorLink:
 			'https://webservices.ulm.edu/facultyactivities/profile/talbert',
 		institution: 'ULM',
+		institutionCode: 'ulm',
 		institutionLink: 'https://www.ulm.edu/',
 		fiscalYear: 2018,
 		grantLink:
@@ -103,6 +105,7 @@ export const cardData: card[] = [
 		investigatorLink:
 			'http://facultypages.vetmed.lsu.edu/faculty/vtgusk',
 		institution: 'LSU',
+		institutionCode: 'lsu',
 		institutionLink: 'https://www.lsu.edu/',
 		fiscalYear: 2019,
 		grantLink:
@@ -120,6 +123,7 @@ export const cardData: card[] = [
 		investigatorLink:
 			'https://www.pbrc.edu/about/executive-director/',
 		institution: 'Pennington Biomedical',
+		institutionCode: 'pennington',
 		institutionLink: 'https://www.pbrc.edu/',
 		fiscalYear: 2019,
 		grantLink:
@@ -137,6 +141,7 @@ export const cardData: card[] = [
 		investigatorLink:
 			'https://www.medschool.lsuhsc.edu/biochemistry/faculty_detail.aspx?name=ochoa_augusto',
 		institution: 'LSUHSC',
+		institutionCode: 'lsuhsc',
 		institutionLink: 'https://www.lsuhsc.edu/',
 		fiscalYear: 2019,
 		grantLink:
@@ -154,6 +159,7 @@ export const cardData: card[] = [
 		investigatorLink:
 			'https://www.pbrc.edu/research-and-faculty/faculty/?faculty=1412',
 		institution: 'Pennington Biomedical',
+		institutionCode: 'pennington',
 		institutionLink: 'https://www.pbrc.edu/',
 		fiscalYear: 2019,
 		grantLink:
@@ -171,6 +177,7 @@ export const cardData: card[] = [
 		investigatorLink:
 			'https://sse.tulane.edu/cell/faculty/wang',
 		institution: 'Tulane',
+		institutionCode: 'tulane',
 		institutionLink: 'https://tulane.edu/',
 		fiscalYear: 2019,
 		grantLink:
@@ -188,6 +195,7 @@ export const cardData: card[] = [
 		investigatorLink:
 			'https://sph.tulane.edu/gchb/maeve-wallace',
 		institution: 'Tulane',
+		institutionCode: 'tulane',
 		institutionLink: 'https://tulane.edu/',
 		fiscalYear: 2019,
 		grantLink:
@@ -205,6 +213,7 @@ export const cardData: card[] = [
 		investigatorLink:
 			'https://medicine.tulane.edu/departments/biochemistry-molecular-biology-tulane-center-aging-tulane-cancer-center/faculty/hong-liu',
 		institution: 'Tulane',
+		institutionCode: 'tulane',
 		institutionLink: 'https://tulane.edu/',
 		fiscalYear: 2019,
 		grantLink:
@@ -222,6 +231,7 @@ export const cardData: card[] = [
 		investigatorLink:
 			'https://www.lsuagcenter.com/profiles/XFu1',
 		institution: 'LSU',
+		institutionCode: 'lsu',
 		institutionLink: 'https://www.lsu.edu/',
 		fiscalYear: 2019,
 		grantLink:
@@ -239,6 +249,7 @@ export const cardData: card[] = [
 		investigatorLink:
 			'http://facultypages.vetmed.lsu.edu/faculty/jey',
 		institution: 'LSU',
+		institutionCode: 'lsu',
 		institutionLink: 'https://www.lsuhsc.edu/',
 		fiscalYear: 2020,
 		grantLink:
@@ -255,6 +266,7 @@ export const cardData: card[] = [
 		investigator: 'Dr. Christopher Kevil',
 		investigatorLink: 'http://www.lsuhscardio.com/christopher-kevil-phd/',
 		institution: 'LSUHSC Shreveport',
+		institutionCode: "lsuhs",
 		institutionLink: 'https://www.lsuhs.edu/',
 		fiscalYear: 2020,
 		grantLink:
@@ -272,6 +284,7 @@ export const cardData: card[] = [
 		investigatorLink:
 			'https://www.lsu.edu/science/biosci/faculty_and_staff/stephens.php',
 		institution: 'Pennington Biomedical',
+		institutionCode: 'pennington',
 		institutionLink: 'https://www.pbrc.edu/',
 		fiscalYear: 2020,
 		grantLink:
@@ -288,6 +301,7 @@ export const cardData: card[] = [
 		investigator: 'Dr. Jiang He',
 		investigatorLink: 'https://sph.tulane.edu/epid/jiang-he',
 		institution: 'Tulane',
+		institutionCode: 'tulane',
 		institutionLink: 'https://tulane.edu/',
 		fiscalYear: 2020,
 		grantLink:
@@ -305,6 +319,7 @@ export const cardData: card[] = [
 		investigatorLink:
 			'https://medicine.tulane.edu/departments/medicine-general-internal-medicine-geriatrics-diabetes-research-tulane-center-aging',
 		institution: 'Tulane',
+		institutionCode: 'tulane',
 		institutionLink: 'https://tulane.edu/',
 		fiscalYear: 2020,
 		grantLink:
@@ -322,6 +337,7 @@ export const cardData: card[] = [
 		investigatorLink:
 			'http://facultypages.vetmed.lsu.edu/faculty/vtgusk',
 		institution: 'LSU',
+		institutionCode: 'lsu',
 		institutionLink: 'https://www.lsu.edu/',
 		fiscalYear: 2019,
 		grantLink:
