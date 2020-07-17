@@ -19,21 +19,22 @@ import {
 	regulationOcular,
 	timingControl,
 	visceralAdipose,
-} from '../assets/awards/index'; 
+} from '../assets/awards/index';
 
 export const cardData: card[] = [
 	{
 		// ids are the project ids from NIH
-		awardType: "COBRE",
+		awardType: 'COBRE',
 		id: '5P30GM110703-05',
 		img: cmtv,
 		imgTitle: 'CMTV',
+		expirationDate: '04/30/2021',
 		title: 'Center for Molecular and Tumor Virology',
 		investigator: 'Dr. Martin Sapp',
 		investigatorLink:
 			'https://www.lsuhs.edu/departments/school-of-graduate-studies/microbiology-and-immunology/research/sapp-lab',
 		institution: 'LSUHSC Shreveport',
-		institutionCode: "lsuhs",
+		institutionCode: 'lsuhs',
 		institutionLink: 'https://www.lsuhs.edu/',
 		fiscalYear: 2018,
 		district: 'LA-04',
@@ -42,11 +43,12 @@ export const cardData: card[] = [
 		fundingAmount: 963192,
 	},
 	{
-		id: "5P30GM110760-05",
+		id: '5P30GM110760-05',
 		title: 'Center for Experimental Infectious Disease Research',
-		awardType: "COBRE",
+		awardType: 'COBRE',
 		img: ceidr,
 		imgTitle: 'CEIDR',
+		expirationDate: '04/30/2021',
 		investigator: 'Dr. Joel Baines',
 		investigatorLink:
 			'https://www.lsuhs.edu/departments/school-of-graduate-studies/microbiology-and-immunology/research/sapp-lab',
@@ -63,8 +65,9 @@ export const cardData: card[] = [
 		id: '5P30GM106392-05',
 		img: cardioVascular,
 		imgTitle: 'Mentoring in Cardiovascular Biology',
+		expirationDate: '07/31/2020',
 		title: 'Mentoring In Cardiovascular Biology',
-		awardType: "COBRE",
+		awardType: 'COBRE',
 		investigator: 'Dr. Daniel Kapusta',
 		investigatorLink:
 			'https://www.medschool.lsuhsc.edu/neuroscience/faculty_detail.aspx?name=kapusta_daniel',
@@ -80,8 +83,9 @@ export const cardData: card[] = [
 	{
 		id: '1R15DK118515-01',
 		img: insulinResistance,
-		awardType: "R15",
+		awardType: 'R15',
 		imgTitle: 'Peripheral Insulin Resistance',
+		expirationDate: '09/19/2021',
 		title: 'Peripheral Insulin Resistance',
 		investigator: 'Dr. Matthew Talbert',
 		investigatorLink:
@@ -97,13 +101,13 @@ export const cardData: card[] = [
 	},
 	{
 		id: '5P20GM103424-18',
-		awardType: "INBRE",
+		awardType: 'INBRE',
 		img: lbrn,
 		imgTitle: 'LBRN',
+		expirationDate: '04/30/2021',
 		title: 'Louisiana Biological Research Network',
 		investigator: 'Dr. Konstantin Kousoulas',
-		investigatorLink:
-			'http://facultypages.vetmed.lsu.edu/faculty/vtgusk',
+		investigatorLink: 'http://facultypages.vetmed.lsu.edu/faculty/vtgusk',
 		institution: 'LSU',
 		institutionCode: 'lsu',
 		institutionLink: 'https://www.lsu.edu/',
@@ -115,13 +119,13 @@ export const cardData: card[] = [
 	},
 	{
 		id: '5U54GM104940-04',
-		awardType: "UNKNOWN",
+		awardType: 'UNKNOWN',
+		expirationDate: '06/30/2021',
 		img: laCats,
 		imgTitle: 'LACATS',
 		title: 'Louisiana Clinical And Translational Science Center',
 		investigator: 'Dr. John Kirwan',
-		investigatorLink:
-			'https://www.pbrc.edu/about/executive-director/',
+		investigatorLink: 'https://www.pbrc.edu/about/executive-director/',
 		institution: 'Pennington Biomedical',
 		institutionCode: 'pennington',
 		institutionLink: 'https://www.pbrc.edu/',
@@ -133,13 +137,14 @@ export const cardData: card[] = [
 	},
 	{
 		id: '5P30GM114732-05',
-		awardType: "COBRE",
+		awardType: 'COBRE',
 		img: mTranslational,
 		imgTitle: 'Mentoring Translational Researchers In Louisiana',
+		expirationDate: '',
 		title: 'Mentoring Translational Researchers In Louisiana',
-		investigator: 'Dr. Augusto Ochoa',
+		investigator: 'Dr. 08usto Ochoa',
 		investigatorLink:
-			'https://www.medschool.lsuhsc.edu/biochemistry/faculty_detail.aspx?name=ochoa_augusto',
+			'https://www.medschool.lsuhsc.edu/biochemistry/faculty_detail.aspx?name=ochoa_08usto',
 		institution: 'LSUHSC',
 		institutionCode: 'lsuhsc',
 		institutionLink: 'https://www.lsuhsc.edu/',
@@ -152,8 +157,9 @@ export const cardData: card[] = [
 	{
 		id: '5P30GM118430-04',
 		img: mObesity,
-		awardType: "COBRE",
+		awardType: 'COBRE',
 		imgTitle: 'Mentoring Obesity And Diabetes Research In Louisiana',
+		expirationDate: '07/31/2020',
 		title: 'Mentoring Obesity And Diabetes Research In Louisiana',
 		investigator: 'Dr. Thomas Gettys',
 		investigatorLink:
@@ -169,13 +175,13 @@ export const cardData: card[] = [
 	},
 	{
 		id: '2R01EY021862-07A1',
-		awardType: "R01",
+		awardType: 'R01',
 		img: regulationOcular,
 		imgTitle: 'Regulation Of Ocular Angiogenesis By Micrornas',
+		expirationDate: '06/30/2021',
 		title: 'Regulation Of Ocular Angiogenesis By Micrornas',
 		investigator: 'Dr. Shusheng Wang',
-		investigatorLink:
-			'https://sse.tulane.edu/cell/faculty/wang',
+		investigatorLink: 'https://sse.tulane.edu/cell/faculty/wang',
 		institution: 'Tulane',
 		institutionCode: 'tulane',
 		institutionLink: 'https://tulane.edu/',
@@ -187,13 +193,13 @@ export const cardData: card[] = [
 	},
 	{
 		id: '5R01HD096070-02',
-		awardType: "R01",
+		awardType: 'R01',
 		img: maternalMortality,
 		imgTitle: 'Impact Of State-Level Policies On Maternal Mortality',
+		expirationDate: '',
 		title: 'Impact Of State-Level Policies On Maternal Mortality',
 		investigator: 'Dr. Maeve Wallace',
-		investigatorLink:
-			'https://sph.tulane.edu/gchb/maeve-wallace',
+		investigatorLink: 'https://sph.tulane.edu/gchb/maeve-wallace',
 		institution: 'Tulane',
 		institutionCode: 'tulane',
 		institutionLink: 'https://tulane.edu/',
@@ -205,9 +211,10 @@ export const cardData: card[] = [
 	},
 	{
 		id: '5R01GM124018-02',
-		awardType: "R01",
+		awardType: 'R01',
 		img: timingControl,
 		imgTitle: 'Timing Control Of Centromeric Cohesion',
+		expirationDate: '08/31/2020',
 		title: 'Timing Control Of Centromeric Cohesion',
 		investigator: 'Dr. Hong Liu',
 		investigatorLink:
@@ -224,12 +231,12 @@ export const cardData: card[] = [
 	{
 		id: '1R15DK122383-01',
 		img: visceralAdipose,
-		awardType: "R15",
+		awardType: 'R15',
 		imgTitle: 'Visceral Adipose Tissue',
+		expirationDate: '08/14/2022',
 		title: 'Visceral Adipose Tissue',
 		investigator: 'Dr. Xing Fu',
-		investigatorLink:
-			'https://www.lsuagcenter.com/profiles/XFu1',
+		investigatorLink: 'https://www.lsuagcenter.com/profiles/XFu1',
 		institution: 'LSU',
 		institutionCode: 'lsu',
 		institutionLink: 'https://www.lsu.edu/',
@@ -242,12 +249,12 @@ export const cardData: card[] = [
 	{
 		id: '5P20GM130555-02',
 		img: clbd,
-		awardType: "COBRE",
+		awardType: 'COBRE',
 		imgTitle: 'CLBD',
+		expirationDate: '12/31/2020',
 		title: 'Center for Lung Biology and Disease',
 		investigator: 'Dr. Samithamby "Jey" Jeyaseelan',
-		investigatorLink:
-			'http://facultypages.vetmed.lsu.edu/faculty/jey',
+		investigatorLink: 'http://facultypages.vetmed.lsu.edu/faculty/jey',
 		institution: 'LSU',
 		institutionCode: 'lsu',
 		institutionLink: 'https://www.lsuhsc.edu/',
@@ -260,13 +267,14 @@ export const cardData: card[] = [
 	{
 		id: '5P20GM121307-03',
 		img: centerRedox,
-		awardType: "COBRE",
+		awardType: 'COBRE',
 		imgTitle: 'Center for Redox Biology',
+		expirationDate: '01/31/2021',
 		title: 'Center for Redox Biology and Cardiovascular Disease',
 		investigator: 'Dr. Christopher Kevil',
 		investigatorLink: 'http://www.lsuhscardio.com/christopher-kevil-phd/',
 		institution: 'LSUHSC Shreveport',
-		institutionCode: "lsuhs",
+		institutionCode: 'lsuhs',
 		institutionLink: 'https://www.lsuhs.edu/',
 		fiscalYear: 2020,
 		grantLink:
@@ -277,8 +285,9 @@ export const cardData: card[] = [
 	{
 		id: '1P20GM135002-01',
 		img: metabolicBasis,
-		awardType: "COBRE",
+		awardType: 'COBRE',
 		imgTitle: 'Metabolic Basis of Disease',
+		expirationDate: '01/31/2021',
 		title: 'Metabolic Basis of Disease',
 		investigator: 'Dr. Jacqueline Stephens',
 		investigatorLink:
@@ -294,9 +303,10 @@ export const cardData: card[] = [
 	},
 	{
 		id: '5P20GM109036-05',
-		awardType: "COBRE",
+		awardType: 'COBRE',
 		img: cardioMetabolic,
 		imgTitle: 'Tulane Cobre For Cardiometabolic Diseases',
+		expirationDate: '02/28/2021',
 		title: 'Tulane Cobre For Cardiometabolic Diseases',
 		investigator: 'Dr. Jiang He',
 		investigatorLink: 'https://sph.tulane.edu/epid/jiang-he',
@@ -312,8 +322,10 @@ export const cardData: card[] = [
 	{
 		id: '5P20GM103629-09',
 		img: aging,
-		awardType: "COBRE",
-		imgTitle: 'Mentoring Research Excellence In Aging And Regenerative Medicine',
+		awardType: 'COBRE',
+		imgTitle:
+			'Mentoring Research Excellence In Aging And Regenerative Medicine',
+		expirationDate: '05/31/2021',
 		title: 'Mentoring Research Excellence In Aging And Regenerative Medicine',
 		investigator: 'Dr. Michal Jazwinski',
 		investigatorLink:
@@ -330,12 +342,12 @@ export const cardData: card[] = [
 	{
 		id: '3P20GM103424-18S1',
 		img: lbrn,
-		awardType: "INBRE Supplement",
+		awardType: 'INBRE Supplement',
 		imgTitle: 'LBRN',
+		expirationDate: '04/30/2021',
 		title: 'Louisiana Biomedical Research Network',
 		investigator: 'Dr. Konstantin Kousoulas',
-		investigatorLink:
-			'http://facultypages.vetmed.lsu.edu/faculty/vtgusk',
+		investigatorLink: 'http://facultypages.vetmed.lsu.edu/faculty/vtgusk',
 		institution: 'LSU',
 		institutionCode: 'lsu',
 		institutionLink: 'https://www.lsu.edu/',

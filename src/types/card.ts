@@ -1,6 +1,7 @@
 export default interface card {
 	awardType: string;
 	grantLink: string;
+	expirationDate: string;
 	id: string;
 	img: string;
 	imgTitle: string;
