@@ -83,7 +83,7 @@ const Awards = () => {
 		const filterFunction = (date: string) => {
 			if (showExpired) {
 				return true;
-			} else if (dayjs().isBefore(dayjs(date))) {
+			} else if (dayjs().isBefore(dayjs(date))){
 				return true;
 			}
 			return false;
