@@ -26,7 +26,8 @@ const Investigators = () => {
 		return data.map((card) => (
 			<Grid item xs={6} sm={4}>
 				<CardWrapper
-					primary={card.investigator}
+					title={card.investigator}
+					primary={card.institution}
 					primaryLink={card.investigatorLink}
 				/>
 			</Grid>

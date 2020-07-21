@@ -119,7 +119,7 @@ export const cardData: card[] = [
 	},
 	{
 		id: '5U54GM104940-04',
-		awardType: 'UNKNOWN',
+		awardType: 'CTSA',
 		expirationDate: '06/30/2021',
 		img: laCats,
 		imgTitle: 'LACATS',
@@ -142,9 +142,9 @@ export const cardData: card[] = [
 		imgTitle: 'Mentoring Translational Researchers In Louisiana',
 		expirationDate: '',
 		title: 'Mentoring Translational Researchers In Louisiana',
-		investigator: 'Dr. 08usto Ochoa',
+		investigator: 'Dr. Augusto Ochoa',
 		investigatorLink:
-			'https://www.medschool.lsuhsc.edu/biochemistry/faculty_detail.aspx?name=ochoa_08usto',
+			'https://www.medschool.lsuhsc.edu/biochemistry/faculty_detail.aspx?name=ochoa_augusto',
 		institution: 'LSUHSC',
 		institutionCode: 'lsuhsc',
 		institutionLink: 'https://www.lsuhsc.edu/',

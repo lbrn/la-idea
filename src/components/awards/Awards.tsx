@@ -67,7 +67,6 @@ const Awards = () => {
 		data: card[]
 	) {
 		const filtered = filterFunction(data, filter);
-		console.log(filtered);
 		setFilteredData(filtered);
 	}
 
@@ -88,9 +87,6 @@ const Awards = () => {
 			}
 			return false;
 		};
-		console.log(
-			data.filter((card: card) => filterFunction(card.expirationDate)).length
-		);
 		return data.filter((card: card) => filterFunction(card.expirationDate));
 	}
 

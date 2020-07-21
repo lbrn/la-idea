@@ -29,6 +29,9 @@ const useStyles = makeStyles({
 	mediaCont: {
 		background: theme.palette.primary.main,
 	},
+	img: {
+		objectPosition: 'left top',
+	}
 });
 
 const Resources = () => {
@@ -42,6 +45,7 @@ const Resources = () => {
 							image={item.img}
 							title={item.imgTitle}
 							className={classes.media}
+							classes={{ root: classes.img }}
 						/>
 					</div>
 					<CardContent>
