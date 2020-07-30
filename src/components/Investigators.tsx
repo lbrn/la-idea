@@ -21,19 +21,23 @@ const Investigators = () => {
 		uniqueInvestigators[card.investigator] = true;
 		return true;
 	});
-	uniqueData.sort(function(a, b){
-		if(a.investigator < b.investigator) { return -1; }
-		if(a.investigator > b.investigator) { return 1; }
+	uniqueData.sort(function (a, b) {
+		if (a.investigator < b.investigator) {
+			return -1;
+		}
+		if (a.investigator > b.investigator) {
+			return 1;
+		}
 		return 0;
-	})
+	});
 
 	const createCards = (data: card[]) => {
 		return data.map((card) => (
 			<Grid item xs={6} sm={4}>
 				<CardWrapper
 					title={card.investigator}
-					primary={card.institution}
 					primaryLink={card.investigatorLink}
+					hasTitleLink={true}
 				/>
 			</Grid>
 		));

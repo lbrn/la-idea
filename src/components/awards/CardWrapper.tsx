@@ -44,10 +44,11 @@ interface cardWrapper {
 	imgTitle?: string;
 	secondaryAction?: string;
 	secondaryActionLink?: string;
-	primary: string;
+	primary?: string;
 	primaryLink: string;
 	title?: string;
 	isGrant?: boolean;
+	hasTitleLink?: boolean;
 }
 
 const CardWrapper = ({
@@ -61,6 +62,7 @@ const CardWrapper = ({
 	primaryLink,
 	isGrant,
 	title,
+	hasTitleLink,
 }: cardWrapper) => {
 	const classes = useStyles();
 	return (
@@ -78,7 +80,14 @@ const CardWrapper = ({
 				)}
 			</a>
 			<CardContent>
-				<Typography variant="h6">{title}</Typography>
+				{!hasTitleLink && <Typography variant="h6">{title}</Typography>}
+				{hasTitleLink && (
+					<Typography
+						variant="h6"
+						component={Link}
+						href={primaryLink}
+				>{title}</Typography>
+				)}
 				{primary && (
 					<Link variant="body2" href={primaryLink}>
 						{primary}
