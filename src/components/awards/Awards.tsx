@@ -17,7 +17,7 @@ import customParseFormat from 'dayjs/plugin/customParseFormat';
 
 import card from '../../types/card';
 import theme from '../../theme/theme';
-import { cardData } from '../../data/newestCardData';
+import { cardData } from '../../data/cardData';
 import Cards from './Cards';
 import unique from '../../utility/unique';
 

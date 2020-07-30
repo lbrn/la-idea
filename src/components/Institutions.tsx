@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid, Typography, Container } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 
-import { cardData } from '../data/newestCardData';
+import { cardData } from '../data/cardData';
 import card from '../types/card';
 import CardWrapper from './awards/CardWrapper';
 import { institutionImages } from '../assets/institutions/index';
