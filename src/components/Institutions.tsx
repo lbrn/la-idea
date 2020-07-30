@@ -27,7 +27,7 @@ const Institutions = () => {
 		});
 
 		return uniqueData.map((card) => (
-			<Grid item xs={12} sm={6}>
+			<Grid item xs={12} sm={6} key={card.id}>
 				<CardWrapper
 					title={card.institution}
 					img={institutionImages[card.institutionCode]}
@@ -42,12 +42,12 @@ const Institutions = () => {
 	return (
 		<Grid container>
 			<Container>
-				<Grid container xs={12} spacing={3}>
+				<Grid item xs={12}>
 					<Typography variant="h4" className={classes.title}>
 						Institutions
 					</Typography>
 				</Grid>{' '}
-				<Grid container xs={12} spacing={3}>
+				<Grid container spacing={3}>
 					{cardData && createCards(cardData)}
 				</Grid>
 			</Container>

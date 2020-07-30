@@ -38,7 +38,7 @@ const Resources = () => {
 	const classes = useStyles();
 	const createResources = (data: resourceCard[]) => {
 		return data.map((item: any) => (
-			<Grid item xs={6}>
+			<Grid item xs={6} key={item.title}>
 				<Card>
 					<div className={classes.mediaCont}>
 						<CardMedia
