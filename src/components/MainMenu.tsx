@@ -72,15 +72,9 @@ const MainMenu = () => {
 					<ListItem button to="/institutions" component={Link}>
 						<ListItemText>Institutions</ListItemText>
 					</ListItem>
-					{/* <ListItem button to="/cores" component={Link}>
-						<ListItemText>Cores</ListItemText>
-					</ListItem> */}
-					<ListItem button to="/award-information" component={Link}>
-						<ListItemText>Award Information</ListItemText>
+					<ListItem button to="/awards" component={Link}>
+						<ListItemText>Awards</ListItemText>
 					</ListItem>
-					{/* <ListItem button to="/nih" component={Link}>
-						<ListItemText>NIH Research</ListItemText>
-					</ListItem> */}
 					<ListItem button to="/resources" component={Link}>
 						<ListItemText>Resources</ListItemText>
 					</ListItem>
