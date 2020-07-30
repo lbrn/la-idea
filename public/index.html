@@ -26,7 +26,41 @@
       Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+	-->
+	    <!-- CONSIDER REPLACING LATER WITH CUSTOM COMPONENT -->
+    <!-- Begin Consent Overlay -->
+    <link
+      href="https://www.lsu.edu/_resources/css/consent.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script
+      type="text/javascript"
+      src="https://www.lsu.edu/_resources/js/consent.js"
+    ></script>
+    <script type="text/javascript">
+      // <![CDATA[
+      window.addEventListener('load', function() {
+        window.cookieconsent.initialise({
+          palette: {
+            popup: {
+              background: `rgba(105, 13, 7, 1)`,
+              text: '#fff',
+            },
+            button: {
+              background: '#eee',
+			  text: `rgb(175,23,11)`,
+            },
+          },
+          content: {
+            link: 'LSU Privacy Statement.',
+            href: 'https://www.lsu.edu/privacy/',
+          },
+        });
+      });
+      // ]]>
+    </script>
+    <!-- End Consent Overlay -->
 	<title>LA IDEA</title>
 </head>
 
