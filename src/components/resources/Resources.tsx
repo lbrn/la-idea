@@ -31,7 +31,7 @@ const useStyles = makeStyles({
 	},
 	img: {
 		objectPosition: 'left top',
-	}
+	},
 });
 
 const Resources = () => {
@@ -45,6 +45,7 @@ const Resources = () => {
 							image={item.img}
 							title={item.imgTitle}
 							className={classes.media}
+							component="img"
 							classes={{ root: classes.img }}
 						/>
 					</div>
