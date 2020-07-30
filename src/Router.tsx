@@ -2,6 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import HomePage from './components/HomePage';
 import About from './components/About';
+import Nih from './components/Nih';
 import Institutions from './components/Institutions';
 import Investigators from './components/Investigators';
 import Resources from './components/resources/Resources';
@@ -13,6 +14,7 @@ const Routes = () => {
 			<Route path="/about">
 				<About />
 			</Route>
+
 			<Route path="/investigators">
 				<Investigators />
 			</Route>

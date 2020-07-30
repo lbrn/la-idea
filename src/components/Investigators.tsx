@@ -33,7 +33,7 @@ const Investigators = () => {
 
 	const createCards = (data: card[]) => {
 		return data.map((card) => (
-			<Grid item xs={6} sm={4}>
+			<Grid item xs={6} sm={4} key={card.id}>
 				<CardWrapper
 					title={card.investigator}
 					primaryLink={card.investigatorLink}
@@ -52,7 +52,7 @@ const Investigators = () => {
 						Investigators
 					</Typography>
 				</Grid>
-				<Grid container xs={12} spacing={3}>
+				<Grid container item xs={12} spacing={3}>
 					{uniqueData && createCards(uniqueData)}
 				</Grid>
 			</Container>
