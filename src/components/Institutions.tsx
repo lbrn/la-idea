@@ -33,8 +33,8 @@ const Institutions = () => {
 					img={institutionImages[card.institutionCode]}
 					imageLink={card.institutionLink}
 					imgTitle={card.institution}
-					primary={card.institution}
 					primaryLink={card.institutionLink}
+					hasTitleLink={true}
 				/>
 			</Grid>
 		));
